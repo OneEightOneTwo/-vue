@@ -5,5 +5,7 @@ const state = Vue.observable( {
     bool:false,
     //右边菜单
     num:false,
+    isActionsheet:false
 }); 
-export default state; 
+
+export default state

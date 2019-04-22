@@ -11,6 +11,10 @@ import TeQuan from './page/TeQuan.vue'
 import VIP from './page/control/VIP.vue'
 import Love from './page/control/Love.vue'
 import Super from './page/control/Super.vue'
+// 设置单页
+import ToConfigure from './pages/ToConfigure.vue'
+// 朋友圈
+import Pyq from './pages/Pyq.vue'
 //定义路由
 const routes = [ {path:'/home', component:Home, name:'home'},  {path:'/teQuan', component:TeQuan, name:'teQuan', 
     children:[ {path:'vip', component:VIP, name:'vip'},  {path:'love', component:Love, name:'love'},  {path:'super', component:Super, name:'super'},
@@ -18,6 +22,8 @@ const routes = [ {path:'/home', component:Home, name:'home'},  {path:'/teQuan', 
     {path:'/teQuan', redirect:'/teQuan/vip'}
 ]
  }, 
+  { path: '/toconfigure', component: ToConfigure,name: 'toconfigure' },
+    { path: '/pyq', component: Pyq,name: 'pyq' },
     //路由重定向 
     {path:'/', redirect:'/home'}
 ]
@@ -27,3 +33,5 @@ const router = new VueRouter( {
 })
 //暴露路由
 export default router
+
+

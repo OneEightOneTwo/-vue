@@ -2,10 +2,14 @@
     <div id="app">
         <Xheader :isShowBack="true" :isShowHam="true">主页</Xheader>
         <shouye/>
+         <HelloWorld />
+         <Xtoast />
         <Grxx />
     </div>
 </template>
 <script>
+import HelloWorld from '../components/HelloWorld.vue'
+import Xtoast from '../components/Xtoast.vue'
 import shouye from '../components/shouye.vue'
 import Grxx from '../components/Grxx.vue'
 import Xheader from '../components/Xheader.vue'
@@ -15,7 +19,9 @@ export default {
   components: {
   shouye,
   Grxx,
-  Xheader
+  Xheader,
+    HelloWorld,
+    Xtoast,
   },
   computed:{
     state(){
@@ -24,4 +30,5 @@ export default {
   }
 }
 </script>
-
+<style>
+</style>

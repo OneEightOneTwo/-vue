@@ -24,8 +24,21 @@ export default {
       this.state.num =!this.state.num;
       
     },
+        todettt() {
+      // 跳转详情页并传递ID值
+      this.$router.push({ name: "xxinxi" });
+    },
+      back() {
+      // 返回
+      this.$router.go(-1);
+    },
+     showDialog() {
+      // 触发action的setIsShowDialog
+      this.$store.dispatch("setIsShowDialog", true);
+    },
     Isleft(){
       this.state.isActionsheet=!this.state.isActionsheet
+  
     }
   },
   computed: {
@@ -33,7 +46,7 @@ export default {
       return state;
     }
   }
-};
+} 
 </script>
 
 <style scoped>
@@ -72,5 +85,42 @@ export default {
   color: #fff;
   text-decoration: underline;
 }
+/* css是局部样式 */
+header {
+  width: 100%;
+  height: 1.38888958rem;
+  line-height: 1.38888958rem;
+  text-align: center;
+  color: white;
+  background-color: red;
+  position:fixed;
+  top:0;
+  left:0;
+  /* 弹性盒布局 */
+  display: flex;
+  }
+  .leftIcon {
+    background-image: url(../assets/back.png);
+    background-repeat: no-repeat;
+    background-size: 0.66666666rem;
+    background-position: center;
+    flex: 1;
+  }
+
+  .title {
+    flex: 3;
+  }
+  .rightIcon {
+    background-image: url(../assets/bi.png);
+    background-repeat: no-repeat;
+    background-size: 0.66666666rem;
+    background-position: center;
+    flex: 1;
+  }
+  /* 空图标 */
+  .emptyIcon {
+    flex: 1;
+  }
+
 </style>
 

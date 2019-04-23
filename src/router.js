@@ -15,17 +15,24 @@ import Super from './page/control/Super.vue'
 import ToConfigure from './pages/ToConfigure.vue'
 // 朋友圈
 import Pyq from './pages/Pyq.vue'
+//手机登录页
+import Home from './pages/Home.vue'
+
+//手机登录
+import Shouji from './pages/Shouji.vue'
+
+//个人信息
+import Xxinxi from './pages/Xxinxi.vue'
+
+//个人资料
+import Ziliao from './pages/Ziliao.vue'
 //定义路由
 const routes = [ {path:'/home', component:Home, name:'home'},  {path:'/teQuan', component:TeQuan, name:'teQuan', 
-    children:[ {path:'vip', component:VIP, name:'vip'},  {path:'love', component:Love, name:'love'},  {path:'super', component:Super, name:'super'},
-    //路由重定向 
-    {path:'/teQuan', redirect:'/teQuan/vip',name:'teQuan'}
+    children:[ {path:'vip', component:VIP, name:'vip'},  {path:'love', component:Love, name:'love'},  {path:'super', component:Super, name:'super'}, 
+    //路由重定向 {path:'/teQuan', redirect:'/teQuan/vip', name:'teQuan'}
 ]
- }, 
-  { path: '/toconfigure', component: ToConfigure,name: 'toconfigure' },
-    { path: '/pyq', component: Pyq,name: 'pyq' },
-    //路由重定向 
-    {path:'/', redirect:'/home'}
+ },  {path:'/toconfigure', component:ToConfigure, name:'toconfigure'},  {path:'/pyq', component:Pyq, name:'pyq'},  {path:'/home', component:Home, name:'home'},  {path:'/shouji/:id', component:Shouji, name:'shouji'},  {path:'/xxinxi/', component:Xxinxi, name:'xxinxi'},  {path:'/ziliao/', component:Ziliao, name:'ziliao'}
+    //路由重定向 {path:'/', redirect:'/home'}
 ]
 //实例化路由
 const router = new VueRouter( {
@@ -33,5 +40,3 @@ const router = new VueRouter( {
 })
 //暴露路由
 export default router
-
-

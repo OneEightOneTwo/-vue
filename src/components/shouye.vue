@@ -122,7 +122,7 @@ body {
   overflow: hidden;
   position: relative;
   right:0;
-  transition: all 3s;
+  transition: all 1s;
 }
 .main {
   margin: 0.266667rem;

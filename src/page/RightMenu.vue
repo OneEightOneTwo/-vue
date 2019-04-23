@@ -70,7 +70,7 @@ export default {
   position: absolute;
   right: -90%;
   top: 0;
-  transition: all 3s;
+  transition: all 1s;
 }
 .head {
   width: 100%;

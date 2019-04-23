@@ -1,7 +1,7 @@
 <template>
   <div id="dome" :style="this.state.num?'right:85%':'right:0'">
     <!-- 左图标 -->
-    <div v-if="isMenu" class="left"></div>
+    <div v-if="isMenu" class="left" @click="Isleft"></div>
     <div v-else class="empty"></div>
     <!-- 标题 -->
     <div class="center">
@@ -21,7 +21,13 @@ export default {
       this.state.bool = true;
     },
     menu() {
+      this.state.isok =false;
       this.state.num =!this.state.num;
+      
+    },
+    Isleft(){
+      this.state.isok =true;
+      this.state.isActionsheet=!this.state.isActionsheet
     }
   },
   computed: {
@@ -43,7 +49,7 @@ export default {
   opacity: 0.8;
   position: relative;
   right:0;
-  transition: all 3s;
+  transition: all 1s;
 }
 .center {
   color: #fff;

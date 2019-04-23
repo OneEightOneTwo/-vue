@@ -1,14 +1,10 @@
 <template>
-<div style="overflow: hidden;">
+<div>
   <div >
     <router-view></router-view>
   </div>
 </div>
 </template>
-
-<script>
-
-</script>
 <style>
 * {
   margin: 0;
@@ -21,6 +17,7 @@ html, body {
 #app {
   height: 90%;
   transition: margin .5s;
+  overflow: hidden;
 }
 </style>
 

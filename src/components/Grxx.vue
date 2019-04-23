@@ -13,7 +13,7 @@
         <el-main id="nr" style="padding:.546667rem 0 0 1.2rem;">
             <p class="gneng_a" @click="tiaozhuan2"><img class="gneng" src="../assets/iconset0146.png" alt=""><span>探探</span></p>
             <br>
-            <p class="gneng_a"><img class="gneng" src="../assets/huangguan.png" alt=""><span>激活特权</span></p>
+            <p  @click="jiHuo" class="gneng_a"><img class="gneng" src="../assets/huangguan.png" alt=""><span>激活特权</span></p>
             <br>
             <p class="gneng_a"><img class="gneng" src="../assets/Id.png" alt=""><span>认证中心</span></p>
             <br>
@@ -49,6 +49,9 @@ export default {
     tiaozhuan3(){
         // this.state.isActionsheet = !this.state.isActionsheet
         this.$router.push({ name: 'pyq', params: { id: 123 }})
+    },
+    jiHuo(){
+        this.$router.push({ name: 'teQuan', params: { id: 123 }})
     }
   },
   computed:{
@@ -61,13 +64,13 @@ export default {
 <style scoped>
 /* 遮罩以头像当背景 */
 #bjtx{
-    width: 90%;
+    width: 337.5px;
     height: 100%;
     background-image: url(../assets/豆腐来明哥.gif);
     background-size: 150% 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
+    left: -3%;
     z-index: 12;
     transition: margin .5s;
     

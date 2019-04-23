@@ -21,12 +21,10 @@ export default {
       this.state.bool = true;
     },
     menu() {
-      this.state.isok =false;
       this.state.num =!this.state.num;
       
     },
     Isleft(){
-      this.state.isok =true;
       this.state.isActionsheet=!this.state.isActionsheet
     }
   },

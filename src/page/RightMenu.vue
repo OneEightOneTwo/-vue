@@ -3,7 +3,7 @@
     <div class="head">
       <a href>2个配对</a>
     </div>
-    <div class="centre">
+    <div class="centre" @click="pyq">
       <div class="left">
         <i>
           <img src="../assets/朋友圈.jpg" alt>
@@ -51,6 +51,10 @@ export default {
     },
     tab(i) {
       this.num = i;
+    },
+    pyq(){
+        this.$router.push({ name: 'pyq', params: { id: 123 }})
+        this.state.num =!this.state.num;
     }
   },
   computed: {

@@ -1,5 +1,5 @@
 <template>
-  <div  id="app">
+  <div  id="app" :style="this.state.isActionsheet?'margin:0 -92% 0 90%;':'margin: 0;'">
     <Xheader :isMenu="true" :isMessage="true" >微信</Xheader>
     <shouye/>
     <RightMenu/>

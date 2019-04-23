@@ -19,7 +19,7 @@ import Pyq from './pages/Pyq.vue'
 const routes = [ {path:'/home', component:Home, name:'home'},  {path:'/teQuan', component:TeQuan, name:'teQuan', 
     children:[ {path:'vip', component:VIP, name:'vip'},  {path:'love', component:Love, name:'love'},  {path:'super', component:Super, name:'super'},
     //路由重定向 
-    {path:'/teQuan', redirect:'/teQuan/vip'}
+    {path:'/teQuan', redirect:'/teQuan/vip',name:'teQuan'}
 ]
  }, 
   { path: '/toconfigure', component: ToConfigure,name: 'toconfigure' },

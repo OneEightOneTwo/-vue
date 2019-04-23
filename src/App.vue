@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div >
+  <div class="abc">
     <router-view></router-view>
   </div>
 </div>
@@ -18,6 +18,12 @@ html, body {
   height: 90%;
   transition: margin .5s;
   overflow: hidden;
+  position: relative;
+}
+.abc{
+  overflow: hidden;
 }
 </style>
+
+
 

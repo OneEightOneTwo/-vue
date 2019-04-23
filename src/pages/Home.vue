@@ -1,5 +1,5 @@
 <template>
-    <div id="app" :style="this.state.isActionsheet?'margin:0 -90% 0 90%;':'margin:0;'">
+    <div id="app">
         <Xheader :isShowBack="true" :isShowHam="true">主页</Xheader>
         <shouye/>
         <Grxx />

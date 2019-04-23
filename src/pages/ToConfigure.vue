@@ -1,6 +1,6 @@
 <template>
     <div id="shezhi" :style="this.state.isActionsheet?'margin:0 -90% 0 90%;':'margin:0;'">
-        <Xheader :isShowBack="true" :isShowHam="true">设置</Xheader>
+        <Xheader :isMenu="true" :isShowHam="true">设置</Xheader>
         <Grxx />
         <div class="main">
                 <p class="main_xbtm">向我显示</p>

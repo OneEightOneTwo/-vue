@@ -1,6 +1,6 @@
 <template>
-    <div id="pengyouquan">
-        <Xheader :isShowBack="false" :isShowHam="false">朋友圈</Xheader>
+    <div id="pengyouquan" :style="this.state.isActionsheet?'margin:0 -90% 0 90%;':'margin:0;'">
+        <Xheader :isMenu="true" :isShowHam="false">朋友圈</Xheader>
         <Grxx />
         <div class="main">
             <div class="yonghuxinxi">
@@ -243,7 +243,7 @@ body,html{
 #pengyouquan{
     display: flex;
     flex-direction: column;
-    /* transition: margin .5s; */
+    transition: margin .5s;
     z-index: -1;
 }
 .main{

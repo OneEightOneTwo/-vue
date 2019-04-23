@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="shezhi" :style="this.state.isActionsheet?'margin:0 -90% 0 90%;':'margin:0;'">
     <Xheader :isMenu="true" :isMessage="false">激活特权</Xheader>
     <Picture/>
     <JiMain/>
@@ -9,6 +9,7 @@
     <router-view></router-view>
     <Xfooter/>
     <Warn/>
+    <Grxx/>
   </div>
 </template>
 
@@ -29,6 +30,8 @@ import JiMain from "./JiMain.vue";
 import Xfooter from "./Xfooter.vue";
 //弹窗
 import Warn from "./Warn.vue";
+import state from "../observable.js";
+import Grxx from '../components/Grxx.vue'
 export default {
   components: {
     Xheader,
@@ -38,10 +41,19 @@ export default {
     // Love,
     // Super,
     Xfooter,
-    Warn
+    Warn,
+    Grxx
+  },
+   computed:{
+    state(){
+      return state
+    }
   }
 };
 </script>
 
 <style>
+.shezhi{
+    transition: margin .5s;
+}
 </style>

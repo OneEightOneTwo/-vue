@@ -10,8 +10,8 @@ export default {};
 
 <style scoped>
 .footer {
-  position:fixed;
-  left:50%;
+  position: relative;
+  left:52.5%;
   bottom:0;
   transform:translate(-50%)
 }

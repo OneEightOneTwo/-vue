@@ -1,7 +1,8 @@
 <template>
-<div id="app">
+<div class="app">
   <div class="abc">
     <router-view></router-view>
+</div>
 </div>
 </template>
 <style>
@@ -13,10 +14,8 @@ html, body {
   height: 100%;
   width: 100%;
 }
-#app {
+.app {
   height: 90%;
-  transition: margin .5s;
-  overflow: hidden;
   position: relative;
 }
 .abc{

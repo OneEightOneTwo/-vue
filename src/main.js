@@ -6,7 +6,7 @@ import App from './App.vue'
 // 路由对象
 import router from './router.js'
 // 饿了么ui
-import ElementUI from 'element-ui';
+import 'element-ui';
 // html
 import 'element-ui/lib/theme-chalk/index.css';
 // jq
@@ -16,10 +16,10 @@ Vue.prototype.$ = $;
 
 Vue.use(ElementUI);
 
-Vue.use(ElementUI)
+// Vue.use(ElementUI)
 
 // 引入路由对象
-import router from './router.js'
+// import router from './router.js'
 // import axios from 'axios'
 // import $ from 'jquery'
 // // Vue继承jquery的方法

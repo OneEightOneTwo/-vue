@@ -122,7 +122,7 @@ export default {
     // 跳转个人信息页
     todettt() {
       // 跳转详情页并传递ID值
-      this.$router.push({ name: "ziliao" });
+      this.$router.push({ name: "home" });
     }
   }
 };

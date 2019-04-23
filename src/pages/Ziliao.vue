@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Xheader :isShowBack="true" :isShowHam="true">个人资料</Xheader>
+  <div class="aa" :style="this.state.isActionsheet?'margin:0 -92% 0 90%;':'margin: 0;'">
+    <Xheader  :isMenu="true" :isShowHam="true">个人资料</Xheader>
     <!-- 头像 -->
     <img @click="todettt" src="../assets/757.jpg" alt>
     <!-- 信息 -->
@@ -30,15 +30,19 @@
       <span class="s3">谁喜欢我?</span>
       <i class="i3"></i>
     </div>
+    <Grxx/>
   </div>
 </template>
 
 <script>
 import Xheader from "../components/Xheader.vue";
+import state from '../observable.js'
+import Grxx from '../components/Grxx.vue'
 export default {
   name: "app",
   components: {
-    Xheader
+    Xheader,
+    Grxx
   },
   methods: {
     open5() {
@@ -52,11 +56,19 @@ export default {
       // 跳转详情页并传递ID值
       this.$router.push({ name: "xxinxi" });
     }
+  },
+  computed:{
+    state(){
+      return state
+    }
   }
 };
 </script>
 
 <style scoped>
+.aa{
+  transition: margin .5s;
+}
 * {
   padding: 0;
   margin: 0;

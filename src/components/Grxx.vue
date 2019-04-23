@@ -2,7 +2,7 @@
 <div id="bjtx" :style="this.state.isActionsheet?'margin-left:0;':'margin-left:-92%;'" @click="showActionsheet">
     <div id="dk" >
         <el-header id="tou" style="height: 5.4rem;">
-            <div class="txiang">
+            <div class="txiang" @click="geren">
                 <img class="yhtx" src="../assets/豆腐来明哥.gif">
                 <br>
                 <span class="yhm">豆腐来明哥</span>
@@ -51,7 +51,13 @@ export default {
         this.$router.push({ name: 'pyq', params: { id: 123 }})
     },
     jiHuo(){
+         this.state.isActionsheet = !this.state.isActionsheet
         this.$router.push({ name: 'teQuan', params: { id: 123 }})
+        
+    },
+    geren(){
+        this.state.isActionsheet = !this.state.isActionsheet
+        this.$router.push({ name: 'ziliao', params: { id: 123 }})
     }
   },
   computed:{
